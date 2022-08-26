@@ -1,5 +1,5 @@
 # picamera-overlay
-Simple text (or whatever) overlay for picamera
+Simple text (or whatever) overlay for picamera (tested on Raspberry OS Buster and Bullseye (32bit) with legacy camera)
 
 Due to my limited skills in Python and PHP, any better programmer can do it better. But this is probably better solution than annotationtext directly from picamera.
 Overlay is realized with picamera web stream and side running PHP for showing wanted values (for my purpose uptime, temp sensor and CPU temp). Next choise is link for capturing JPG photo in day or night.
@@ -27,12 +27,18 @@ sudo service lighttpd reload
 After these steps everything should be ready.
 
 Next you must allow www-data user to run SUDO commands (stop and start camera.service for take static picture in full resolution)
-```sudo visudo```
+```
+sudo visudo
+```
 and add this
-```www-data   ALL=NOPASSWD: /var/www/html/photo-day.sh, /var/www/html/photo-night.sh```
+```
+www-data   ALL=NOPASSWD: /var/www/html/photo-day.sh, /var/www/html/photo-night.sh
+```
 
 Create picamera service (name camera.service)
-```sudo nano /etc/systemd/system/camera.service```
+```
+sudo nano /etc/systemd/system/camera.service
+```
 
 and add this (or copy prepared file):
 ```
@@ -45,6 +51,7 @@ ExecStart=python3 /home/pi/camera.py
 [Install]
 WantedBy=multi-user.target
 ```
+
 After this you can now copy  all files to /var/www/html (photo*, index.php, temperature*, uptime.sh).
 
 Note that to edit all nessecary files for IP address change.
