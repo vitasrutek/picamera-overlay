@@ -1,5 +1,5 @@
 # picamera-overlay
-Simple text (or whatever) overlay for picamera (tested on Raspberry OS Buster and Bullseye (32bit) with legacy camera)
+Simple text (or whatever) overlay for picamera web stream (tested on Raspberry OS Buster and Bullseye (32bit) with legacy camera)
 
 Due to my limited skills in Python and PHP, any better programmer can do it better. But this is probably better solution than annotationtext directly from picamera.
 Overlay is realized with picamera web stream and side running PHP for showing wanted values (for my purpose uptime, temp sensor and CPU temp). Next choise is link for capturing JPG photo in day or night.
