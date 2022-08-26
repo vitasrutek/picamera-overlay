@@ -51,7 +51,11 @@ ExecStart=python3 /home/pi/camera.py
 [Install]
 WantedBy=multi-user.target
 ```
-
+and activate service:
+```
+sudo systemctl enable camera.service
+sudo systemctl start camera.service
+```
 After this you can now copy  all files to /var/www/html (photo*, index.php, temperature*, uptime.sh).
 
 Note that to edit all nessecary files for IP address change.
