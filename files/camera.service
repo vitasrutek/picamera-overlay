@@ -1,0 +1,8 @@
+[Unit]
+Description=Service for PiCamera
+
+[Service]
+ExecStart=python3 /home/pi/camera.py
+
+[Install]
+WantedBy=multi-user.target
