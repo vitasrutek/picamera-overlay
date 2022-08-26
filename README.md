@@ -4,7 +4,7 @@ Simple text (or whatever) overlay for picamera
 Due to my limited skills in Python and PHP, any better programmer can do it better. But this is probably better solution than annotationtext directly from picamera.
 Overlay is realized with picamera web stream and side running PHP for showing wanted values (for my purpose uptime, temp sensor and CPU temp). Next choise is link for capturing JPG photo in day or night.
 
-![screenshot](https://github.com/vitasrutek/picamera-overlay/blob/main/screenshot.png)
+![screenshot](https://github.com/vitasrutek/picamera-overlay/blob/main/screenshot.PNG)
 
 First of all you need picamera installed - https://picamera.readthedocs.io/en/release-1.13/install.html
 Then you have to install Lighttpd and PHP.
